@@ -162,22 +162,34 @@ export default function Home() {
         </table>
         {/* Grand Total */}
         <div className="w-full max-w-md mt-2">
-          <div
-            className="flex justify-between items-center px-4 py-3 bg-gray-800 rounded-b-xl border border-t-0 border-gray-300 text-white font-semibold"
-            style={{
-              borderTopLeftRadius: 0,
-              borderTopRightRadius: 0,
-              borderBottomLeftRadius: "16px",
-              borderBottomRightRadius: "16px",
-            }}
-          >
-            <span>Grand Total</span>
-            <span>
-              {totalJual || totalBeli
-                ? (totalJual - totalBeli).toLocaleString()
-                : ""}
-            </span>
-          </div>
+          {nominalJual ? (
+            <div
+              className="flex justify-between items-center px-4 py-3 bg-gray-800 rounded-b-xl border border-t-0 border-gray-300 text-white font-semibold"
+              style={{
+                borderTopLeftRadius: 0,
+                borderTopRightRadius: 0,
+                borderBottomLeftRadius: "16px",
+                borderBottomRightRadius: "16px",
+              }}
+            >
+              <span>Grand Total</span>
+              <span>{(totalJual - totalBeli).toLocaleString()}</span>
+            </div>
+          ) : (
+            // Jika nominalJual kosong, Grand Total tidak ditampilkan atau kosong
+            <div
+              className="flex justify-between items-center px-4 py-3 bg-gray-800 rounded-b-xl border border-t-0 border-gray-300 text-white font-semibold"
+              style={{
+                borderTopLeftRadius: 0,
+                borderTopRightRadius: 0,
+                borderBottomLeftRadius: "16px",
+                borderBottomRightRadius: "16px",
+              }}
+            >
+              <span>Grand Total</span>
+              <span></span>
+            </div>
+          )}
           {/* Tampilkan kerugian jika ada */}
           {kerugian > 0 && (
             <div className="flex flex-col gap-1 bg-red-100 text-red-800 rounded-b-xl px-4 py-3 mt-2 border border-t-0 border-red-300">
