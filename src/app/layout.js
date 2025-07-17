@@ -20,6 +20,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <title>Kalkulator Fee Admin Trading</title>
+      <meta
+        name="google-site-verification"
+        content="RGrUBpxFCkiIxHMtFwBF8JvaFL8xbjKtQJC7JxYmlVI"
+      />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
