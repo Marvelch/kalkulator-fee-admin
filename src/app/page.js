@@ -215,12 +215,7 @@ export default function Home() {
         </div>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <Image
-            src="/qr.jpeg"
-            alt="Vercel logomark"
-            width={150}
-            height={150}
-          />
+          <Image src="/qr.jpeg" alt="Qr" width={150} height={150} />
           <a
             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-auto"
             href="https://stream.trakteer.id/qr-code.html?qr_pattern=rounded&creator=topantopan&timestamp=1752709002"
